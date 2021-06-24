@@ -1,4 +1,4 @@
-####### Estimação das probabilidades de transição para a matriz definida no trabalho ######
+####### EstimaÃ§Ã£o das probabilidades de transiÃ§Ã£o para a matriz definida no trabalho ######
 
 library(data.table)
 library("seqinr")
@@ -9,10 +9,10 @@ x1 = 2
 x1
 
 
-# Logo abaixo, definimos então a função que recebe x (um vetor de valores prévios, nosso primeiro passado)
-# n que é o tamanho da amostra que quero gerar
-# q é a matrix de sucesso
-# e burn que é o quanto quero queimar da minha amostra (Este valor tem que ser um valor entre [0.1,1])
+# Logo abaixo, definimos entÃ£o a funÃ§Ã£o que recebe x (um vetor de valores prÃ©vios, nosso primeiro passado)
+# n que Ã© o tamanho da amostra que quero gerar
+# q Ã© a matrix de sucesso
+# e burn que Ã© o quanto quero queimar da minha amostra (Este valor tem que ser um valor entre [0.1,1])
 
 
 matrix = c(0.25,1/3,0,0,1/3,
@@ -24,21 +24,21 @@ q = matrix(matrix,5,5) # matriz de h linhas e 1 coluna
 q
 
 
-# ordem é em relação ao comportamento da matrix, caso ao passar do tempo a probabilidade aumente por crescente, caso contrário decrescente
+# ordem Ã© em relaÃ§Ã£o ao comportamento da matrix, caso ao passar do tempo a probabilidade aumente por crescente, caso contrÃ¡rio decrescente
 altura = 4
 criacao.amostra <- function(x1,n,q){
   
   cadeia.simulada = x1
   
-  y = runif(n) # gerando uma distribuição uniforme de tamanho n
+  y = runif(n) # gerando uma distribuiÃ§Ã£o uniforme de tamanho n
   
-  ser_diferente_zero <- function(x) x > 0 # função que encontra o valor 1 na sequência
+  ser_diferente_zero <- function(x) x > 0 # funÃ§Ã£o que encontra o valor 1 na sequÃªncia
   
-  ultimo_um = list() # vetor que registra o último um observado (posição index)
+  ultimo_um = list() # vetor que registra o Ãºltimo um observado (posiÃ§Ã£o index)
   
   ultimo.estado.visto = c()
   
-  distancia.ultimo.um = c() # distÂncia do presente para o último 1 encontrado
+  distancia.ultimo.um = c() # distÃ‚ncia do presente para o Ãºltimo 1 encontrado
   
   prob.final = c()
   
@@ -51,7 +51,7 @@ criacao.amostra <- function(x1,n,q){
   prob.evento3 = c()
   
   prob.evento4 = c()
-  # comprimento da minha sequÊncia x dada
+  # comprimento da minha sequÃŠncia x dada
   
   df <- data.frame( q )
   
@@ -61,7 +61,7 @@ criacao.amostra <- function(x1,n,q){
   
   df$estado = estado
   
-  # portanto, criamos agr o limite que minha série chega
+  # portanto, criamos agr o limite que minha sÃ©rie chega
   
   names(df) <- c("probabilidade1","probabilidade2","probabilidade3","probabilidade4","probabilidade5","estado")
   
@@ -69,7 +69,7 @@ criacao.amostra <- function(x1,n,q){
   
   for(i in 1:n){
     ultimo.estado.visto[[i]] <- cadeia.simulada[[i]]
-    # dentro do for, desenvolvemos essa função que encontra o último 1 e retorna seu index
+    # dentro do for, desenvolvemos essa funÃ§Ã£o que encontra o Ãºltimo 1 e retorna seu index
     
     nova.obs <- subset(frame.final, frame.final$estado == ultimo.estado.visto[[i]]) 
     
