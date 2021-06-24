@@ -1,5 +1,5 @@
 ##### Simulacao ######
-#simular cadeias de Markov discretas de acordo com a matriz de transição P.
+#simular cadeias de Markov discretas de acordo com a matriz de transiÃ§Ã£o P.
 run.mc.sim <- function( P, num.iters = 50 ) {
   
   # numero de possiveis estados
@@ -34,16 +34,16 @@ P <- t(matrix(c( 0.25, 0.25, 0.25, 0.25, 0,
                  0,       0,  0.5, 0.25, 0.25,
                  0.33, 0.33, 0.33,    0, 0), nrow=5, ncol=5))
 
-# Nº de simulações 
-num.chains     <- 5 # Numero de simulações
-num.iterations <- 50 # Numero de iterações
+# NÂº de simulaÃ§Ãµes 
+num.chains     <- 5 # Numero de simulaÃ§Ãµes
+num.iterations <- 50 # Numero de iteraÃ§Ãµes
 chain.states  <- matrix(NA, ncol=num.chains, nrow=num.iterations)
 
-# Simulação
+# SimulaÃ§Ã£o
 for(c in seq_len(num.chains)){
   chain.states[,c] <- run.mc.sim(P)
 }
 
-matplot(chain.states, main = "Simulação",sub = "Simulação de uma amostra de tamanho n, iniciando a cadeia no estado 1", type='l', lty=1, col=1:5, ylim=c(0,6), ylab='estado', xlab='tempo')
+matplot(chain.states, main = "SimulaÃ§Ã£o",sub = "SimulaÃ§Ã£o de uma amostra de tamanho n, iniciando a cadeia no estado 1", type='l', lty=1, col=1:5, ylim=c(0,6), ylab='estado', xlab='tempo')
 abline(h=1, lty=3)
 abline(h=5, lty=3)
