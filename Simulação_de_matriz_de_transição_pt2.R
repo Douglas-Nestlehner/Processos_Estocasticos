@@ -3,7 +3,7 @@ library("seqinr")
 #primeiro banco
 #Síndrome respiratória aguda grave coronavírus 2 isolado SARS-CoV-2 / humano / USA / NY-CDC-ASC210039297 / 2021, genoma completo
 
-x1 =      taaaggttta taccttccca ggtaacaaac caaccaactt tcgatctctt gtagatctgt 
+x1 = "taaaggttta taccttccca ggtaacaaac caaccaactt tcgatctctt gtagatctgt 
        61 tctctaaacg aactttaaaa tctgtgtggc tgtcactcgg ctgcatgctt agtgcactca 
       121 cgcagtataa ttaataacta attactgtcg ttgacaggac acgagtaact cgtctatctt 
       181 ctgcaggctg cttacggttt cgtccgtgtt gcagccgatc atcagcacat ctaggttttg 
@@ -255,10 +255,10 @@ x1 =      taaaggttta taccttccca ggtaacaaac caaccaactt tcgatctctt gtagatctgt
     14941 tccatttaat aaatggggta aggctagact ttattatgat tcaatgagtt atgaggatca 
     15001 agatgcactt ttcgcatata caaaacgtaa tgtcatccct actataactc aaatgaatct 
     15061 taagtatgcc attagtgcaa agaatagagc tcgcaccgta gctggtgtct ctatctgtag 
-    15121 tactatgacc aatagacagt ttcatcaaa
+    15121 tactatgacc aatagacagt ttcatcaaa"
 
 
-x2 =      taaaggttta taccttccca ggtaacaaac caaccaactt tcgatctctt gtagatctgt 
+x2 = "taaaggttta taccttccca ggtaacaaac caaccaactt tcgatctctt gtagatctgt 
        61 tctctaaacg aactttaaaa tctgtgtggc tgtcactcgg ctgcatgctt agtgcactca 
       121 cgcagtataa ttaataacta attactgtcg ttgacaggac acgagtaact cgtctatctt 
       181 ctgcaggctg cttacggttt cgtccgtgtt gcagccgatc atcagcacat ctaggttttg 
@@ -510,7 +510,7 @@ x2 =      taaaggttta taccttccca ggtaacaaac caaccaactt tcgatctctt gtagatctgt
     14941 tccatttaat aaatggggta aggctagact ttattatgat tcaatgagtt atgaggatca 
     15001 agatgcactt ttcgcatata caaaacgtaa tgtcatccct actataactc aaatgaatct 
     15061 taagtatgcc attagtgcaa agaatagagc tcgcaccgta gctggtgtct ctatctgtag 
-    15121 tactatgacc aatagacagt ttcatcaaa
+    15121 tactatgacc aatagacagt ttcatcaaa"
 
 
 estimar.mv.com.ac <- function(x,x2,k){
@@ -547,7 +547,7 @@ estimar.mv.com.ac(x1,x2,4)
 # Síndrome respiratória aguda grave coronavírus 2 isolado SARS-CoV-2 / humano / USA / VA-DCLS-5379/2021, genoma completo
 
 
-x12=      ctcttgtaga tctgttctct aaacgaactt taaaatctgt gtggctgtca ctcggctgca 
+x12= "ctcttgtaga tctgttctct aaacgaactt taaaatctgt gtggctgtca ctcggctgca 
        61 tgcttagtgc actcacgcag tataattaat aactaattac tgtcgttgac aggacacgag 
       121 taactcgtct atcttctgca ggctgcttac ggtttcgtcc gtgttgcagc cgatcatcag 
       181 cacatctagg ttttgtccgg gtgtgaccga aaggtaagat ggagagcctt gtccctggtt 
@@ -799,9 +799,9 @@ x12=      ctcttgtaga tctgttctct aaacgaactt taaaatctgt gtggctgtca ctcggctgca
     14941 gagttatgag gatcaagatg cacttttcgc atatacaaaa cgtaatgtca tccctactat 
     15001 aactcaaatg aatcttaagt atgccattag tgcaaagaat agagctcgca ccgtagctgg 
     15061 tgtctctatc tgtagtacta tgaccaatag acagtttcat caaaaattat tgaaatcaat 
-    15121 agccgccact agaggagcta ctgtagtaat
+    15121 agccgccact agaggagcta ctgtagtaat"
 
-x22 =     ctcttgtaga tctgttctct aaacgaactt taaaatctgt gtggctgtca ctcggctgca 
+x22 = "ctcttgtaga tctgttctct aaacgaactt taaaatctgt gtggctgtca ctcggctgca 
        61 tgcttagtgc actcacgcag tataattaat aactaattac tgtcgttgac aggacacgag 
       121 taactcgtct atcttctgca ggctgcttac ggtttcgtcc gtgttgcagc cgatcatcag 
       181 cacatctagg ttttgtccgg gtgtgaccga aaggtaagat ggagagcctt gtccctggtt 
@@ -1053,7 +1053,7 @@ x22 =     ctcttgtaga tctgttctct aaacgaactt taaaatctgt gtggctgtca ctcggctgca
     14941 gagttatgag gatcaagatg cacttttcgc atatacaaaa cgtaatgtca tccctactat 
     15001 aactcaaatg aatcttaagt atgccattag tgcaaagaat agagctcgca ccgtagctgg 
     15061 tgtctctatc tgtagtacta tgaccaatag acagtttcat caaaaattat tgaaatcaat 
-    15121 agccgccact agaggagcta ctgtagtaa
+    15121 agccgccact agaggagcta ctgtagtaa"
 
 estimar.mv.com.ac(x12,x22,4)
 
